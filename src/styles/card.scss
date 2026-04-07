@@ -1,7 +1,7 @@
 .card {
   width: 200px;
   padding: 32px 16px 16px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $card-border-color;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -35,7 +35,7 @@
   &__review-quantity {
     align-self: flex-end;
 
-    @include card-font(10px, 14px, 400, $secondary-color);
+    @include card-font(10px, 14px, 400, $primary-color);
   }
 
   &__price-block {
@@ -56,9 +56,9 @@
   &__button {
     height: 40px;
     text-transform: uppercase;
-    color: #fff;
-    background-color: $accent-color;
-    border: 1px solid $accent-color;
+    color: $button-secondary-color;
+    background-color: $button-primary-color;
+    border: 1px solid $button-primary-color;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -69,8 +69,8 @@
     @include card-font(14px, 18px, 700, #fff);
 
     &:hover {
-      color: $accent-color;
-      background-color: #fff;
+      color: $button-primary-color;
+      background-color: $button-secondary-color;
     }
   }
 }
